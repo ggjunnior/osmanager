@@ -1,4 +1,4 @@
-package com.gersonjunior.ordensdeservico.domain.model;
+package com.gerson.osmanager.domain.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

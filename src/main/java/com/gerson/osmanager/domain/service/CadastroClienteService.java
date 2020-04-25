@@ -1,11 +1,11 @@
-package com.gersonjunior.ordensdeservico.domain.service;
+package com.gerson.osmanager.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gersonjunior.ordensdeservico.domain.exception.NegocioExceptio;
-import com.gersonjunior.ordensdeservico.domain.model.Cliente;
-import com.gersonjunior.ordensdeservico.domain.repository.ClienteRepository;
+import com.gerson.osmanager.domain.exception.NegocioException;
+import com.gerson.osmanager.domain.model.Cliente;
+import com.gerson.osmanager.domain.repository.ClienteRepository;
 
 @Service
 public class CadastroClienteService {
@@ -17,7 +17,7 @@ public class CadastroClienteService {
 		Cliente clienteExistente = clienteRepository.findByEmail(cliente.getEmail());
 		
 		if(clienteExistente != null && !clienteExistente.equals(cliente)) {
-			throw new NegocioExceptio("Já existe um cliente cadastrando com este e-mail");
+			throw new NegocioException("Já existe um cliente cadastrando com este e-mail");
 		}
 		
 		return clienteRepository.save(cliente);

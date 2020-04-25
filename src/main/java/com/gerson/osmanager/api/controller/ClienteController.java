@@ -1,4 +1,4 @@
-package com.gersonjunior.ordensdeservico.api.controller;
+package com.gerson.osmanager.api.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gersonjunior.ordensdeservico.domain.model.Cliente;
-import com.gersonjunior.ordensdeservico.domain.repository.ClienteRepository;
-import com.gersonjunior.ordensdeservico.domain.service.CadastroClienteService;
+import com.gerson.osmanager.domain.model.Cliente;
+import com.gerson.osmanager.domain.repository.ClienteRepository;
+import com.gerson.osmanager.domain.service.CadastroClienteService;
 
 @RestController
 @RequestMapping("/clientes")
